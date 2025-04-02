@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Ultra Chat App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- LOBBY SCREEN -->
+        <div id="lobby" class="view active">
+            <div class="glass-card header">
+                <h1><i class="fas fa-comments"></i> Ultra Chat</h1>
+                <button id="themeToggle" class="icon-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <div class="glass-card main-content">
+                <button id="createRoomBtn" class="glow-btn">
+                    <i class="fas fa-plus"></i> Create Room
+                </button>
+
+                <h2>Available Rooms</h2>
+                <div id="roomList" class="room-grid"></div>
+            </div>
+
+            <div class="glass-card footer">
+                <p>Made with ❤️ using HTML, CSS & JS</p>
+            </div>
+        </div>
+
+        <!-- CHAT ROOM SCREEN -->
+        <div id="chatRoom" class="view">
+            <div class="glass-card chat-header">
+                <button id="leaveRoomBtn" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h2 id="roomNameDisplay">Room Name</h2>
+                <div id="typingIndicator"></div>
+            </div>
+
+            <div id="messages" class="messages-container">
+                <div class="welcome-message">
+                    <i class="fas fa-door-open"></i>
+                    <p>You joined the room!</p>
+                </div>
+            </div>
+
+            <div class="message-input-container">
+                <input 
+                    type="text" 
+                    id="usernameInput" 
+                    placeholder="Your Name" 
+                    class="glass-input"
+                >
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="Type a message..." 
+                        class="glass-input"
+                    >
+                    <button id="sendMessageBtn" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="notificationSound" src="sounds/notification.mp3"></audio>
+    <audio id="sendSound" src="sounds/send.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
